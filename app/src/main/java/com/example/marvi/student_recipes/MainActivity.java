@@ -17,13 +17,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.content_main);
         mRecyclerView = (RecyclerView) findViewById(R.id.recipe_recycler_view);
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
         ArrayList<Recipe> mRecipesList = new ArrayList<Recipe>();
         Recipe mPitta = new Recipe("Pizza", "fhwiefhwui");
+        Recipe mKuchen = new Recipe("Kuchen", "fhwiefhwui");
+        Recipe mToast = new Recipe("Toast", "fhwiefhwui");
+        Recipe mSojapflaume = new Recipe("Sojapflaume", "fhwiefhwui");
         mRecipesList.add(mPitta);
+        mRecipesList.add(mKuchen);
+        mRecipesList.add(mToast);
+        mRecipesList.add(mSojapflaume);
         mAdapter = new MyAdapter(mRecipesList);
         mRecyclerView.setAdapter(mAdapter);
     }

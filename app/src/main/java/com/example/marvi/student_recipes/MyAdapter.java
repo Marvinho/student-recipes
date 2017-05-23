@@ -23,7 +23,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         public ViewHolder(View v){
             super(v);
-            mRecipeTitle = (TextView) v.findViewById(R.id.recipes);
+            mRecipeTitle = (TextView) v.findViewById(R.id.mRecipeName);
             v.setOnClickListener(this);
         }
 
